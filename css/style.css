@@ -51,12 +51,17 @@ header {
     background-color: #000;
     margin:20px auto;
     animation-duration: 1s;
+    animation-fill-mode: forwards;
     position:relative;
 }
 header, 
 #logo {
     height:130px;
     width: 200px;
+    
+}
+#logo {
+    pointer-events: none;
 }
 button,
 #excluir {
@@ -173,7 +178,7 @@ button {
 
 
 .linkHeader {
-    display: none;
+    opacity: 0;
     color: #fff;
 }
 .linkContato {

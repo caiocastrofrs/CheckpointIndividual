@@ -31,7 +31,7 @@ header,
 button,
 #urlImg,
 #titulo,
-#descricao,
+#sinopse,
 #urlImg:focus,
 #titulo:focus {
     border: none;
@@ -87,6 +87,7 @@ button {
 .form-inserir-card,
 .card :nth-child(1) {
     box-shadow: 1px 1px 10px #191919;
+
 }
 .form-inserir-card {
     left:50%;
@@ -99,7 +100,7 @@ button {
     border-radius: 5px;
 }
 .section-conteudo-container {
-    margin:150px;
+    margin:100px;
     gap:100px;
 }
 .botao-card {
@@ -108,6 +109,9 @@ button {
 .card {
     max-width:300px;
     animation-duration: 1s;
+}
+.card img {
+    height:400px;
 }
 #excluir {
     display: none;
@@ -123,20 +127,22 @@ button {
 
 #urlImg,
 #titulo,
-#descricao {
+#sinopse {
     height:30px;
 }
 .excluir-card {
     
     border: 5px solid #d34f4f;
+    transition: border .1s ease;
 }
 .excluir-card,
 .editar-card {
-    padding:10px;
-    transform: scale(0.950);
+    padding:5px;
+    transform: scale(0.990);
 }
 .editar-card {
     border: 5px solid #6991e9;
+    transition: border .1s ease;
 }
 @keyframes animacaoCriarCard {
     from {transform: scale(0);}
@@ -164,6 +170,9 @@ button {
         align-items: center;
     }
     .section-div-botoes {
+        position: fixed;
+        bottom:10px;
+        z-index:2;
         flex-direction: row;
         height:45px;
     }
@@ -246,5 +255,38 @@ button {
     @keyframes animacaoEsconderHeader {
         from {width:100%;}
         to {width: 200px;}
+    }
+}
+
+
+/*CSS PÁGINA CONTATO*/
+.section-contato {
+    padding:100px;
+    margin:100px auto;
+    background-color: #0f0c29;
+    border-radius:10px;
+    box-shadow: 1px 1px 10px #191919;
+}
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+}
+.form-control {
+    width: 200px;
+    height:30px;
+    border: none;
+}
+.contatoBtnEnviar {
+    width:150px;
+    height:40px;
+    font-size:1.2rem;
+    border: none;
+    border-radius: 10px;
+}
+@media (min-width: 400px) {
+    .section-contato {
+        width:400px;
     }
 }

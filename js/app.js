@@ -1,5 +1,6 @@
 //RECUPERANDO POP UP DE INSERIR CARD
 let divInserirCard = document.getElementById('pop-up');
+
 window.addEventListener('load',function() {
     divInserirCard.style.display = "none";
 })
@@ -23,25 +24,25 @@ function fecharPopup() {
 }
 
 //FUNÇÃO PARA CRIAR TODOS OS ELEMENTOS DO CARD
-function criarCard(caminhoImagem, tituloH2, descricaoP) {
+function criarCard(caminhoImagem, tituloH2, sinopseP) {
     let card = document.createElement('section');
     let titulo = document.createElement('h2');
     let img = document.createElement('img');
-    let descricao = document.createElement('p');
+    let sinopse = document.createElement('p');
 
     card.classList.add('card');
     card.setAttribute('onclick', "addEditSelecao(this)");
     img.src = caminhoImagem;
     img.alt = `poster do filme ${titulo}`;
     titulo.innerText = tituloH2;
-    descricao.innerText = descricaoP;
+    sinopse.innerText = sinopseP;
     card.addEventListener('dblclick', function() {
         this.classList.toggle('excluir-card');
     })
     card.style.animationName = "animacaoCriarCard";
     card.appendChild(img);
     card.appendChild(titulo);
-    card.appendChild(descricao);
+    card.appendChild(sinopse);
 
     return card;
 }
@@ -49,14 +50,14 @@ function criarCard(caminhoImagem, tituloH2, descricaoP) {
 function inserirCard() {
     let img;
     let titulo;
-    let descricao;
+    let sinopse;
     let card;
     
     if(checarCamposVazios()) {
         img = document.getElementById('urlImg').value;
         titulo = document.getElementById('titulo').value;
-        descricao = document.getElementById('descricao').value;
-        card = criarCard(img, titulo, descricao);
+        sinopse = document.getElementById('sinopse').value;
+        card = criarCard(img, titulo, sinopse);
         document.getElementById('card-container').appendChild(card);
         limparCampos();
         fecharPopup(); 
@@ -77,7 +78,7 @@ function excluirCard(card) {
 function checarCamposVazios() {
     if((document.getElementById('urlImg').value.length > 0) && 
     (document.getElementById('titulo').value.length > 0) && 
-    (document.getElementById('descricao').value.length > 0)) {
+    (document.getElementById('sinopse').value.length > 0)) {
         return true;
     } else {
         return false;
@@ -148,8 +149,8 @@ function editarCard() {
     if(document.getElementById('titulo').value.length > 0) {
         card.children[1].innerText = document.getElementById('titulo').value;
     }
-    if(document.getElementById('descricao').value.length > 0) {
-        card.children[2].innerText = document.getElementById('descricao').value;
+    if(document.getElementById('sinopse').value.length > 0) {
+        card.children[2].innerText = document.getElementById('sinopse').value;
     }
     card.classList.remove('editar-card');
     resetBotaoInserirCard();
@@ -170,7 +171,7 @@ function resetBotaoInserirCard() {
 function limparCampos() {
     document.getElementById('urlImg').value = "";
     document.getElementById('titulo').value = "";
-    document.getElementById('descricao').value = "";
+    document.getElementById('sinopse').value = "";
 }
 //FUNÇÃO PARA ATIVAR A ANIMAÇÃO DE EXPANDIR DO HEADER E A INSERÇÃO DOS DOIS LINKS 
 function expandirHeader() {
@@ -196,3 +197,11 @@ function esconderHeader() {
         },150)
     },100);
 }
+
+function inserirExemplosCard() {
+    document.getElementById('card-container').appendChild(criarCard('https://s3.amazonaws.com/criterion-production/films/9c3df80b84fb6e0e7f3ef692cb6ff579/zLMh5Bdp1x7ZdMgkD776ew5Qsh9iRC_large.jpg','Chungking Express','The whiplash, double-pronged Chungking Express is one of the defining works of 1990s cinema and the film that made Wong Kar Wai an instant icon.'));
+    document.getElementById('card-container').appendChild(criarCard('https://upload.wikimedia.org/wikipedia/pt/d/d7/Tudo_Sobre_Lily_Chou-Chou_Poster.jpg','All About Lily Chou Chou','Charts the troubled teenage years of students Yūichi Hasumi and Shūsuke Hoshino, exploring the shifting and complex power dynamics of their relationship against the backdrop of Yūichi’s love for the dreamy and abstract music of fictional pop star Lily Chou-Chou.'));
+    document.getElementById('card-container').appendChild(criarCard('https://temqueassistir.files.wordpress.com/2015/04/snatch_1.jpg','Snatch','The second film from British director Guy Ritchie. Snatch tells an obscure story similar to his first fast-paced crazy character-colliding filled film “Lock, Stock and Two Smoking Barrels.” There are two overlapping stories here – one is the search for a stolen diamond, and the other about a boxing promoter who’s having trouble with a psychotic gangster.'));
+}
+
+inserirExemplosCard();

@@ -6,25 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <title>Aula 11</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/ios-filled/50/000000/film-noir.png" type="image/x-icon">
+    <title>Home</title>
 </head>
 <body>
+    <!-- HEADER-->
     <header id="header"  onmouseenter="expandirHeader()" onmouseleave="esconderHeader()">
         <a href="equipe.html" class="linkHeader linkEquipe" id="equipe"><img src="icons/equipe.png"></a>
         <img src="imgs/logo.png" id="logo">
         <a href="contato.html" class="linkHeader linkContato" id="contato"><img src="icons/contato.png"></a>
     </header>
+    <!--/HEADER-->
+    <!--COMEÇO DO CONTEÚDO DA PÁGINA-->
+
     <main>
+        <!--CRIAÇÃO DO POP-UP QUE SERVE PARA INSERIR E EDITAR FILMES-->
         <section id="pop-up" >
             <form class="form-inserir-card">
-                <input type="text" placeholder="URL da Imagem" id="urlImg">
-                <input type="text" placeholder="Título da imagem" id="titulo">
-                <input type="text" placeholder="Descrição" id="descricao">
+                <input type="text" placeholder="URL da capa" id="urlImg">
+                <input type="text" placeholder="Título do filme" id="titulo">
+                <input type="text" placeholder="Sinopse" id="sinopse">
                 <button onclick="inserirCard()" id="btnEnviar">Inserir filme</button>
                 <button onclick="fecharPopup()">Fechar</button>
             </form>
         </section>
+        <!-- CRIAÇÃO DO CONTAINER ONDE SERÁ ADICIONADO TODOS OS CARDS CRIADOS-->
         <section class="section-conteudo-container">
             <div class="section-div-botoes">
                 <button onclick="abrirPopup()" class="botao-card"><i class="material-icons">add</i></button>
@@ -34,6 +40,8 @@
             <div id="card-container"></div>
         </section>
     </main>
+    <!--FIM DO CONTEÚDO DA PÁGINA-->
+    <!-- LINK DO ARQUIVO JS-->
     <script src="./js/app.js"></script>
 </body>
 </html>

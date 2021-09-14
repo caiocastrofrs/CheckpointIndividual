@@ -225,12 +225,19 @@ button {
     box-shadow: 1px 1px 5px #000;
 }
 
-@media (max-width:548px) {
+
+@media screen and (max-width:548px) {
     header {
-        margin-bottom:200px;
+        margin-bottom:100px;
     }
-    .section-cards-equipe {
+    .card-equipe {
         margin:10px;
+        min-width:200px;
+        flex-direction: column;
+    }
+    .div-social {
+        flex-direction: row;
+        justify-content: center;
     }
     @keyframes animacaoExpandirHeader {
         from {width:200px;}
@@ -238,31 +245,6 @@ button {
     }
     @keyframes animacaoEsconderHeader {
         from {width:100%;}
-        to {width: 200px;}
-    }
-}
-
-@media (max-width:900px) {
-    header {
-        margin:10px auto;
-    }
-     @keyframes animacaoExpandirHeader {
-        from {width:200px;}
-        to {width: 100%;}
-    }
-    @keyframes animacaoEsconderHeader {
-        from {width:100%;}
-        to {width: 200px;}
-    }
-}
-
-@media (max-width:1150px) {
-    @keyframes animacaoExpandirHeader {
-        from {width:200px;}
-        to {width: 60%;}
-    }
-    @keyframes animacaoEsconderHeader {
-        from {width:60%;}
         to {width: 200px;}
     }
 }

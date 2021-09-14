@@ -172,19 +172,21 @@ function limparCampos() {
     document.getElementById('titulo').value = "";
     document.getElementById('descricao').value = "";
 }
-
+//FUNÇÃO PARA ATIVAR A ANIMAÇÃO DE EXPANDIR DO HEADER E A INSERÇÃO DOS DOIS LINKS 
 function expandirHeader() {
     let divHeader = document.getElementById('header');
     let imagem = document.getElementById('logo');
     setTimeout(function() {
-         divHeader.style.animationName = "animacaoExpandirHeader"; 
-        document.getElementById('equipe').style.display = "inline-block";
-        document.getElementById('contato').style.display = "inline-block";
+        divHeader.style.animationName = "animacaoExpandirHeader"; 
+        setTimeout(function() {
+            document.getElementById('equipe').style.display = "inline-block";
+            document.getElementById('contato').style.display = "inline-block";
+        },150)
+
         divHeader.style.width = "30%";
     },100);
-    
 }
-
+//FUNÇÃO PARA ESCONDER OS ITENS DO HEADER E DESATIVAR A ANIMAÇÃO
 function esconderHeader() {
     let divHeader = document.getElementById('header');
     setTimeout(function () {
@@ -192,7 +194,5 @@ function esconderHeader() {
         document.getElementById('contato').style.display = "none";
         divHeader.style.animationName = "animacaoEsconderHeader";
         divHeader.style.width = "200px";
-    },100);
-    
-
+    },185);
 }

@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size:15px;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #211d4d, #211d4d, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #211d4d, #211d4d, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+header,
+.form-inserir-card,
+.section-conteudo-container,
+.section-div-botoes,
+#card-container {
+    display: flex;
+}
+header,
+#card-container {
+    justify-content: center;
+}
+.section-div-botoes {
+    height:170px;
+}
+button,
+#urlImg,
+#titulo,
+#descricao,
+#urlImg:focus,
+#titulo:focus {
+    border: none;
+}
+button,
+.card :nth-child(1),
+header,
+#logo {
+    border-radius:10px;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+header {
+    align-items: center;
+    background-color: #000;
+    margin:20px auto;
+    animation-duration: 1s;
+    position:relative;
+}
+header, 
+#logo {
+    height:130px;
+    width: 200px;
+}
+button,
+#excluir {
+    cursor:pointer;
+}
+button {
+    background-color: #000;
+    color:#f3f3f3;
+    font-size: 1.2rem;
+    padding:5px;
+}
+.form-inserir-card,
+#excluir{
+    position: absolute;
+}
+.form-inserir-card,
+.section-div-botoes {
+    flex-direction: column;
+}
+.form-inserir-card,
+.section-div-botoes {
+    gap:10px;
+}
+.form-inserir-card,
+.card :nth-child(1) {
+    box-shadow: 1px 1px 10px #191919;
+}
+.form-inserir-card {
+    left:50%;
+    bottom:50%;
+    transform: translate(-50%);
+    width:250px;
+    padding:20px;
+    z-index:2;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+.section-conteudo-container {
+    margin:150px;
+    gap:100px;
+}
+.botao-card {
+    padding:10px;
+}
+.card {
+    max-width:300px;
+    animation-duration: 1s;
+}
+#excluir {
+    display: none;
+    margin: 10px;
+    width:15px;
+}
+#card-container {
+    width:90%;
+    height:500px;
+    gap:35px;
+    flex-wrap: wrap;
+}
+
+#urlImg,
+#titulo,
+#descricao {
+    height:30px;
+}
+.excluir-card {
+    
+    border: 5px solid #d34f4f;
+}
+.excluir-card,
+.editar-card {
+    padding:10px;
+    transform: scale(0.950);
+}
+.editar-card {
+    border: 5px solid #6991e9;
+}
+@keyframes animacaoCriarCard {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+@keyframes animacaoExcluirCard {
+    from {transform: scale(1);}
+    to {transform: scale(0);}
+}
+@keyframes animacaoExpandirHeader {
+    from {width:200px;}
+    to {width: 30%;}
+}
+@keyframes animacaoEsconderHeader {
+    from {width:30%;}
+    to {width: 200px;}
+}
+@keyframes animacaoLinks {
+    from {}
+} 
+
+@media (max-width: 1024px) {
+    .section-conteudo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-div-botoes {
+        flex-direction: row;
+        height:45px;
+    }
+    .card img {
+        min-width:250px;
+    }
+    .form-inserir-card {
+        bottom:20%;
+    }
+}
+
+
+.linkHeader {
+    display: none;
+    color: #fff;
+}
+.linkContato {
+    position: absolute;
+    right:10%;
+}
+.linkEquipe {
+    position: absolute;
+    left:10%;
+}

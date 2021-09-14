@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Aula 11</title>
+</head>
+<body>
+    <header id="header"  onmouseover="expandirHeader()" onmouseout="esconderHeader()">
+        <a href="https://cssgradient.io/gradient-backgrounds/" class="linkHeader linkEquipe" id="equipe"><img src="icons/equipe.png"></a>
+        <img src="imgs/logo.png" id="logo">
+        <a href="https://cssgradient.io/gradient-backgrounds/" class="linkHeader linkContato" id="contato"><img src="icons/contato.png"></a>
+    </header>
+    <main>
+        <section id="pop-up" >
+            <form class="form-inserir-card">
+                <input type="text" placeholder="URL da Imagem" id="urlImg">
+                <input type="text" placeholder="Título da imagem" id="titulo">
+                <input type="text" placeholder="Descrição" id="descricao">
+                <button onclick="inserirCard()" id="btnEnviar">Inserir filme</button>
+                <button onclick="fecharPopup()">Fechar</button>
+            </form>
+        </section>
+        <section class="section-conteudo-container">
+            <div class="section-div-botoes">
+                <button onclick="abrirPopup()" class="botao-card"><i class="material-icons">add</i></button>
+                <button onclick="checarCardsSelecaoExcluir()" class="botao-card"><i class="material-icons">delete</i></button>
+                <button onclick="popUpEditar()" class="botao-card"><i class="material-icons">edit</i></button>
+            </div>
+            <div id="card-container"></div>
+        </section>
+    </main>
+    <script src="./js/app.js"></script>
+</body>
+</html>

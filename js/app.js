@@ -177,7 +177,7 @@ function expandirHeader() {
     let divHeader = document.getElementById('header');
     setTimeout(async function() {
         divHeader.style.animationName = "animacaoExpandirHeader"; 
-        divHeader.style.width = "30%";
+        divHeader.style.width = "33%";
          setTimeout(function() {
             document.getElementById('equipe').style.opacity = "1";
             document.getElementById('contato').style.opacity = "1";

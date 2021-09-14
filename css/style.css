@@ -12,7 +12,7 @@ body {
     background: #0f0c29;
     background: -webkit-linear-gradient(to right, #211d4d, #211d4d, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #211d4d, #211d4d, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    color: #fff;
 }
 header,
 .form-inserir-card,
@@ -53,15 +53,14 @@ header {
     animation-duration: 1s;
     animation-fill-mode: forwards;
     position:relative;
+    height:130px;
 }
 header, 
 #logo {
-    height:130px;
     width: 200px;
-    
 }
 #logo {
-    pointer-events: none;
+    height:125px;
 }
 button,
 #excluir {
@@ -149,10 +148,10 @@ button {
 }
 @keyframes animacaoExpandirHeader {
     from {width:200px;}
-    to {width: 30%;}
+    to {width: 33%;}
 }
 @keyframes animacaoEsconderHeader {
-    from {width:30%;}
+    from {width:33%;}
     to {width: 200px;}
 }
 @keyframes animacaoLinks {
@@ -188,4 +187,82 @@ button {
 .linkEquipe {
     position: absolute;
     left:10%;
+}
+
+
+
+
+
+
+/*CSS DA PÁGINA DE EQUIPE*/
+.section-cards-equipe {
+    display: flex;
+    flex-wrap: wrap;
+    margin:100px;
+    justify-content: center;
+    gap: 100px;
+    padding:10px;
+}
+
+.card-equipe {
+    display:flex;
+    gap:15px;
+}
+.div-social {
+    display: flex;
+    gap:10px;
+    flex-direction: column;
+}
+.div-info span {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.div-info img {
+    width:250px;
+    border-radius:10px;
+    box-shadow: 1px 1px 5px #000;
+}
+
+@media (max-width:548px) {
+    header {
+        margin-bottom:200px;
+    }
+    .section-cards-equipe {
+        margin:10px;
+    }
+    @keyframes animacaoExpandirHeader {
+        from {width:200px;}
+        to {width: 100%;}
+    }
+    @keyframes animacaoEsconderHeader {
+        from {width:100%;}
+        to {width: 200px;}
+    }
+}
+
+@media (max-width:900px) {
+    header {
+        margin:10px auto;
+    }
+     @keyframes animacaoExpandirHeader {
+        from {width:200px;}
+        to {width: 100%;}
+    }
+    @keyframes animacaoEsconderHeader {
+        from {width:100%;}
+        to {width: 200px;}
+    }
+}
+
+@media (max-width:1150px) {
+    @keyframes animacaoExpandirHeader {
+        from {width:200px;}
+        to {width: 60%;}
+    }
+    @keyframes animacaoEsconderHeader {
+        from {width:60%;}
+        to {width: 200px;}
+    }
 }

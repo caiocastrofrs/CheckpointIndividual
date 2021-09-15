@@ -1,0 +1,112 @@
+/*CSS DA PAGINA HOME*/
+.form-inserir-card,
+.section-conteudo-container,
+.section-div-botoes,
+#card-container {
+    display: flex;
+}
+
+#card-container {
+    justify-content: center;
+}
+.section-div-botoes {
+    height:170px;
+}
+button,
+#urlImg,
+#titulo,
+#sinopse,
+#urlImg:focus,
+#titulo:focus {
+    border: none;
+}
+button,
+.card :nth-child(1){
+    border-radius:10px;
+}
+button,
+#excluir {
+    cursor:pointer;
+}
+button {
+    background-color: #000;
+    color:#f3f3f3;
+    font-size: 1.2rem;
+    padding:5px;
+}
+.form-inserir-card,
+#excluir{
+    position: absolute;
+}
+.form-inserir-card,
+.section-div-botoes {
+    flex-direction: column;
+}
+.form-inserir-card,
+.section-div-botoes {
+    gap:10px;
+}
+.form-inserir-card,
+.card :nth-child(1) {
+    box-shadow: 1px 1px 10px #191919;
+
+}
+.form-inserir-card {
+    left:50%;
+    bottom:50%;
+    transform: translate(-50%);
+    width:250px;
+    padding:20px;
+    z-index:2;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+#pop-up {
+    display:none;
+}
+.section-conteudo-container {
+    margin:100px;
+    gap:100px;
+}
+.botao-card {
+    padding:10px;
+}
+.card {
+    max-width:300px;
+    animation-duration: 1s;
+}
+.card img {
+    height:400px;
+}
+#excluir {
+    display: none;
+    margin: 10px;
+    width:15px;
+}
+#card-container {
+    width:90%;
+    height:500px;
+    gap:100px;
+    flex-wrap: wrap;
+}
+
+#urlImg,
+#titulo,
+#sinopse {
+    height:30px;
+}
+.excluir-card {
+    
+    border: 5px solid #d34f4f;
+    transition: border .1s ease;
+}
+.excluir-card,
+.editar-card {
+    padding:5px;
+    transform: scale(0.950);
+}
+.editar-card {
+    border: 5px solid #6991e9;
+    transition: border .1s ease;
+}
+

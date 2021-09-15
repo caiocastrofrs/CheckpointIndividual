@@ -1,0 +1,31 @@
+/*CSS DO HEADER DE TODAS AS PÁGINAS*/
+#header {
+    display: flex;
+    justify-content: center;
+    border-radius:10px;
+    align-items: center;
+    background-color: #000;
+    margin:20px auto;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position:relative;
+    height:130px;
+    width: 200px;
+}
+#logo {
+    border-radius:10px;
+    width: 200px;
+    height:125px;
+}
+.linkHeader {
+    opacity: 0;
+    color: #fff;
+}
+.linkContato {
+    position: absolute;
+    right:10%;
+}
+.linkEquipe {
+    position: absolute;
+    left:10%;
+}

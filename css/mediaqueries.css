@@ -1,0 +1,49 @@
+/*MEDIAQUERIES PARA CELULAR*/
+@media screen and (max-width:548px) {
+    #header {
+        margin-bottom:100px;
+    }
+    .card-equipe {
+        margin:10px;
+        min-width:200px;
+        flex-direction: column;
+    }
+    .div-social {
+        flex-direction: row;
+        justify-content: center;
+    }
+    @keyframes animacaoExpandirHeader {
+        from {width:200px;}
+        to {width: 100%;}
+    }
+    @keyframes animacaoEsconderHeader {
+        from {width:100%;}
+        to {width: 200px;}
+    }
+}
+@media (min-width: 400px) {
+    .section-contato {
+        width:400px;
+    }
+}
+/*MEDIA QUERY PARA DE TELA MÉDIO PORTE*/
+@media (max-width: 1024px) {
+    .section-conteudo-container {
+        margin:5px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-div-botoes {
+        position: fixed;
+        bottom:10px;
+        z-index:2;
+        flex-direction: row;
+        height:45px;
+    }
+    .card img {
+        min-width:250px;
+    }
+    .form-inserir-card {
+        bottom:20%;
+    }
+}

@@ -1,0 +1,31 @@
+/*CSS DA PÁGINA DE EQUIPE*/
+.section-cards-equipe {
+    display: flex;
+    flex-wrap: wrap;
+    margin:100px;
+    justify-content: center;
+    gap: 100px;
+    padding:10px;
+}
+
+.card-equipe {
+    display:flex;
+    gap:15px;
+}
+.div-social {
+    display: flex;
+    gap:10px;
+    flex-direction: column;
+}
+.div-info span {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.div-info img {
+    width:250px;
+    border-radius:10px;
+    box-shadow: 1px 1px 5px #000;
+}
+

@@ -1,0 +1,17 @@
+/*KEYFRAMES DO HEADER E DO CARD*/
+@keyframes animacaoCriarCard {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+@keyframes animacaoExcluirCard {
+    from {transform: scale(1);}
+    to {transform: scale(0);}
+}
+@keyframes animacaoExpandirHeader {
+    from {width:200px;}
+    to {width: 33%;}
+}
+@keyframes animacaoEsconderHeader {
+    from {width:33%;}
+    to {width: 200px;}
+}

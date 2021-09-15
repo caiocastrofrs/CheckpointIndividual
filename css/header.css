@@ -18,7 +18,7 @@
     height:125px;
 }
 .linkHeader {
-    opacity: 0;
+    display: none;
     color: #fff;
 }
 .linkContato {

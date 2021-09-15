@@ -1,5 +1,9 @@
 /*MEDIAQUERIES PARA CELULAR*/
 @media screen and (max-width:548px) {
+    #equipe,
+    #contato {
+        width:45px;
+    }
     #header {
         margin-bottom:100px;
     }

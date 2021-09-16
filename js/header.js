@@ -9,6 +9,11 @@ function expandirHeader() {
             document.getElementById('contato').style.display = "inline-block";
         },170)
     },100);
+    setTimeout(function () {
+        if(isMobile()) {
+            divHeader.style.borderRadius = "0";
+        }
+    }, 95);
 }
 //FUNÇÃO PARA ESCONDER OS ITENS DO HEADER E DESATIVAR A ANIMAÇÃO
 function esconderHeader() {
@@ -20,7 +25,7 @@ function esconderHeader() {
         setTimeout(function() {
             document.getElementById('equipe').style.display = "none";
             document.getElementById('contato').style.display = "none"; 
-        },150)
+        },150);
     },100);
 }
 
